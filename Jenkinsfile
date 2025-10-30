@@ -31,7 +31,7 @@ pipeline {
                 sh '''
                     echo "Test stage"
                     ls -la
-                    [ -f "build/index.html" ] && echo "Found" || echo "Missing"
+                    test -f build/index.html
                     npm test
 
                 '''
