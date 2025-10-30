@@ -31,12 +31,12 @@ pipeline {
                 sh '''
                     echo "Test stage"
                     ls -la
-                    [ -f /build/index.html ] && echo "Found" || echo "Missing"
+                    [ -f "build/index.html" ] && echo "Found" || echo "Missing"
                     npm test
 
                 '''
             }
-}
+        }
 
     }
 }
